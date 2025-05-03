@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bauoffice Wetzlar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Optional: Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Overlay für die Erfolgsmeldung -->
+    <div id="successOverlay" style="display: none; position: fixed; top: 20px; left: 20px; background: #fbfcfb; color: rgb(0, 0, 0); padding: 10px; border-radius: 5px; border-color: gray; z-index: 999999; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+        <p>E-Mail erfolgreich gesendet!</p>
+        <div id="progressBar" style="width: 100%; height: 5px; background: #ffffff; margin-top: 10px; border-radius: 3px; overflow: hidden;">
+            <div id="progress" style="width: 100%; height: 100%; background: #3498db; transition: width 5s linear;"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">Bauoffice Wetzlar</a>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Angebot</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <!-- <li><a href="#partners">Partner</a></li> -->
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content animate-on-scroll fade-in">
+            <h1>Routiniert & Vertraulich</h1>
+            <p>Moderne Bauweise nach Ihrem Wunsch</p>
+            <a href="#portfolio" class="cta-button">Unsere Projekte</a>
+        </div>
+        <div class="scroll-down-indicator">
+             <a href="#about"><span></span>Scroll</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Über uns</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll slide-in-left">
+                    <h3>Unsere Philosophie</h3>
+                    <p>Wir verteten die Meinung, dass eine Spitzenleistung nur durch einen allumfassenden Überblick über das Projekt erfolgen kann.</p>
+                    <p>Daher unterstützen wir Sie von der Planung bis hin zur Baubegleitung, um ein möglichst positives Endergebnis zu ermöglichen. Dank jahrelanger Erfahrung und Beteiligung an verschiedensten Bauobjekten können wir Ihnen dies mit gutem Gewissen garantieren. </p>
+                </div>
+                <div class="about-image animate-on-scroll slide-in-right">
+                    <img src="https://img.ccnull.de/1090000/preview/1092718_fe05cc40c00d154fadbec37b158f5f9f.jpg" alt="Modern Office Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Was wir anbieten</h2>
+            <div class="services-grid">
+                <div class="service-item animate-on-scroll slide-up">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>Architektur</h3>
+                    <p>Von Konzepten bis hin zu detaillierten Bauplänen, wir bieten nachvollziehbare Designvorschläge an.</p>
+                </div>
+                <div class="service-item animate-on-scroll slide-up delay-1">
+                    <i class="fas fa-building"></i>
+                    <h3>Bauaufsicht</h3>
+                    <p>Während jeder Bauphase behalten wir den Überblick über das Baugeschehen und die Einhaltung der abesprochenen Ziele.</p>
+                </div>
+                 <div class="service-item animate-on-scroll slide-up delay-3">
+                    <i class="fas fa-solar-panel"></i>
+                    <h3>Energienachweis</h3>
+                    <p>Auch im Thema Energie untersützten wir Sie umfassend.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Vorgestellte Projekte</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate-on-scroll zoom-in">
+                    <img src="https://picsum.photos/seed/project1/600/400" alt="Project Alpha">
+                    <div class="portfolio-overlay">
+                        <h3>Modern Residence</h3>
+                        <p>Cityscape Views</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate-on-scroll zoom-in delay-1">
+                    <img src="https://picsum.photos/seed/project2/600/400" alt="Project Beta">
+                     <div class="portfolio-overlay">
+                        <h3>Commercial Hub</h3>
+                        <p>Downtown Core</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate-on-scroll zoom-in delay-2">
+                    <img src="https://picsum.photos/seed/project3/600/400" alt="Project Gamma">
+                     <div class="portfolio-overlay">
+                        <h3>Cultural Center</h3>
+                        <p>Community Space</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item animate-on-scroll zoom-in delay-3">
+                    <img src="https://picsum.photos/seed/project4/600/400" alt="Project Delta">
+                     <div class="portfolio-overlay">
+                        <h3>Eco Tower</h3>
+                        <p>Sustainable Living</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <!-- <section id="partners" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Unsere Partner</h2>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <a href="https://www.hwk-wiesbaden.de/ansprechpartner/dipl-ing-fh-martin-mueller-44,0,dadetail.html?id=361" target="_blank" rel="noopener noreferrer">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipNaPjxI51y-6sXnv8RMyglMCrzwz1nMBMbr1qVu=s680-w680-h510" alt="Partner 1">
+                    </a>
+                    <p>Martin Müller, Energieberater</p>
+
+                </div>
+                <div class="partner-item">
+                    <img src="partner2.jpg" alt="Partner 2">
+                    <p>Partner 2</p>
+                </div>
+                <div class="partner-item">
+                    <img src="partner3.jpg" alt="Partner 3">
+                    <p>Partner 3</p>
+                </div>
+                <div class="partner-item">
+                    <img src="partner4.jpg" alt="Partner 4">
+                    <p>Partner 4</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Calculator Section -->
+    <!-- <section id="calculator" class="content-section centered-calculator">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Kostenrechner</h2>
+            <div class="calculator-content">
+                <label for="input-number">Geben Sie die Quadratmeterzahl ein:</label>
+                <input type="number" id="input-number" placeholder="z. B. 100">
+                <button id="calculate-button" class="cta-button">Berechnen</button>
+                <p>Gesamtkosten: <span id="total-cost">0 €</span></p>
+                <table id="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Gewerk</th>
+                            <th>Kosten (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Architektur</td>
+                            <td id="cost-architecture">0 €</td>
+                        </tr>
+                        <tr>
+                            <td>Bauaufsicht</td>
+                            <td id="cost-supervision">0 €</td>
+                        </tr>
+                        <tr>
+                            <td>Energienachweis</td>
+                            <td id="cost-energy">0 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Kontaktieren Sie uns</h2>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll slide-in-left">
+                    <h3>Impressum</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Alte Wache 10, 35578 Wetzlar</p>
+                    <p><i class="fas fa-phone"></i> +49 176/20041978</p>
+                    <p><i class="fas fa-envelope"></i> a.kempf@gmx.de</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/philipp_kmpf/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll slide-in-right">
+                    <h3>Senden Sie uns eine Nachricht</h3>
+                    <form action="/php/contact.php" method="POST"> <!-- Needs backend processing -->
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Betreff">
+                        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                        <button type="submit" class="cta-button">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bauoffice Wetzlar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('calculate-button').addEventListener('click', function() {
+            const inputNumber = document.getElementById('input-number').value;
+            const costArchitecture = inputNumber * 100;
+            const costSupervision = inputNumber * 150;
+            const costEnergy = inputNumber * 50;
+            const totalCost = costArchitecture + costSupervision + costEnergy;
+
+            document.getElementById('cost-architecture').textContent = costArchitecture.toLocaleString() + ' €';
+            document.getElementById('cost-supervision').textContent = costSupervision.toLocaleString() + ' €';
+            document.getElementById('cost-energy').textContent = costEnergy.toLocaleString() + ' €';
+            document.getElementById('total-cost').textContent = totalCost.toLocaleString() + ' €';
+        });
+    </script>
+
+<script>
+    document.getElementById('kontaktForm').addEventListener('submit', async function (event) {
+        event.preventDefault(); // Verhindert das Standard-Formularverhalten (Seitenreload)
+
+        const formData = new FormData(this); // Holt die Formulardaten
+        const data = Object.fromEntries(formData.entries()); // Konvertiert FormData in ein Objekt
+
+        try {
+            const response = await fetch('/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+            // Zeige das Overlay bei Erfolg
+            const overlay = document.getElementById('successOverlay');
+            const progress = document.getElementById('progress');
+            overlay.style.display = 'block';
+
+            // Vergrößere das Overlay um 30%
+            overlay.style.transform = 'scale(1.3)';
+            overlay.style.transition = 'transform 0.3s ease';
+
+            // Setze den Fortschrittsbalken zurück und starte die Animation
+            progress.style.width = '100%';
+            setTimeout(() => {
+                progress.style.width = '0%';
+            }, 10); // Verzögerung, um die Animation zu starten
+
+            // Scrolle an den Anfang der Seite
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Blende das Overlay nach 3 Sekunden aus
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.style.transform = 'scale(1)'; // Zurück zur Originalgröße
+            }, 5000);
+
+            // Lösche den eingetragenen Text aus den Feldern bei Erfolg
+            this.reset();
+            document.querySelectorAll("#kontaktForm input, #kontaktForm textarea").forEach(field => {
+                field.value = '';
+            });
+            } else if (response.status === 400) {
+            } else {
+            alert('Fehler beim Senden der E-Mail. Bitte versuchen Sie es erneut.');
+            }
+        } catch (error) {
+            console.error('Fehler:', error);
+            alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
+        }
+    });
+    </script>
+</body>
+</html>
