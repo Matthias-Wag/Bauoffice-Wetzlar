@@ -2,16 +2,16 @@
 /* Default Light Mode */
 :root {
     --primary-color: #000000;
-    --secondary-color: #0056b3;
+    --secondary-color: #ec3131;
     --accent-color: #f8f9fa; /* Very Light Grey/Off-white */
     --text-color: #000000;
     --light-text-color: #f1f1f1;
-    --bg-light: #ffffff;
-    --bg-alt: #f9f9f9;
+    --bg-light: #ec3131;
+    --bg-alt: #f7f1da;
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Montserrat', sans-serif;
     --transition-speed: 0.6s;
-    --bg-color: #ffffff;
+    --bg-color: #f7f1da;
     --alt-bg-color: #f9f9f9;
 }
 
@@ -121,7 +121,7 @@ img {
 /* --- Header --- */
 /* Light Mode Header */
 #header {
-    background-color: rgba(255, 255, 255, 0.95); /* Heller Hintergrund */
+    background-color: white; /* Heller Hintergrund */
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -199,7 +199,7 @@ body.dark-mode #header a:hover {
 /* --- Hero Section --- */
 #hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/0/08/Wetzlar%2C_Germany_-_panoramio.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://upload.wikimedia.org/wikipedia/commons/0/08/Wetzlar%2C_Germany_-_panoramio.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,7 +319,7 @@ body.dark-mode #header a:hover {
 }
 
 .services-grid {
-    background-color: var(--bg-color); /* Nutzt die Dark-Mode-Hintergrundfarbe */
+    background-color: var(--bg-alt); /* Nutzt die Dark-Mode-Hintergrundfarbe */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
