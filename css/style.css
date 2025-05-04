@@ -6,32 +6,12 @@
     --accent-color: #f8f9fa; /* Very Light Grey/Off-white */
     --text-color: #000000;
     --light-text-color: #f1f1f1;
-    --bg-light: #ec3131;
-    --bg-alt: #f7f1da;
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Montserrat', sans-serif;
     --transition-speed: 0.6s;
     --bg-color: #f7f1da;
-    --alt-bg-color: #f9f9f9;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    --bg-color: #121212;
-    --bg-columncolor: #393737;
-    --text-color: #ffffff;
-    --primary-color: #ffffff;
-    --secondary-color: #1c7ed6;
-    --alt-bg-color: #1e1e1e;
-}
-
-body.dark-mode .content-section {
-    background-color: var(--bg-color) !important;
-}
-
-body.dark-mode .alt-bg {
-    background-color: var(--bg-color) !important;
-}
 
 * {
     margin: 0;
@@ -47,7 +27,7 @@ body {
     font-family: var(--body-font);
     line-height: 1.7;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background: linear-gradient(to bottom, #ffffff 5%, var(--bg-color) 95%) !important;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -90,12 +70,6 @@ img {
 
 .content-section {
     padding: 80px 0;
-    background-color: var(--bg-light);
-    background-color: var(--bg-color);
-}
-
-.alt-bg {
-    background-color: var(--bg-alt);
 }
 
 .section-title {
@@ -124,6 +98,7 @@ img {
     background-color: white; /* Heller Hintergrund */
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    top: -70px;
 }
 
 #header a {
@@ -131,19 +106,6 @@ img {
     transition: color 0.3s ease;
 }
 
-/* Dark Mode Header */
-body.dark-mode #header {
-    background-color: rgba(18, 18, 18, 0.95); /* Dunkler Hintergrund */
-    color: var(--text-color);
-}
-
-body.dark-mode #header a {
-    color: var(--text-color);
-}
-
-body.dark-mode #header a:hover {
-    color: var(--secondary-color); /* Hover-Farbe im Dark-Mode */
-}
 
 #header nav {
     display: flex;
@@ -332,24 +294,16 @@ body.dark-mode #header a:hover {
 /* --- Services Section --- */
 /* Light Mode */
 .services-grid {
-    background-color: var(--bg-light); /* Nutzt die helle Hintergrundfarbe */
 }
 
 .services-grid {
-    background-color: var(--bg-alt); /* Nutzt die Dark-Mode-Hintergrundfarbe */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     text-align: center;
 }
 
-/* Dark Mode */
-body.dark-mode .services-grid {
-    background-color: var(--bg-color); /* Nutzt die dunkle Hintergrundfarbe */
-}
-
 .service-item {
-    background-color: var(--alt-bg-color); /* Nutzt die alternative Hintergrundfarbe */
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -552,15 +506,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Dark Mode Footer */
-body.dark-mode footer {
-    background-color: var(--bg-color); /* Dunkler Hintergrund */
-    color: var(--text-color); /* Textfarbe für den Dark-Mode */
-}
-
-body.dark-mode footer p {
-    color: var(--text-color); /* Sicherstellen, dass der Text lesbar ist */
-}
 
 /* --- Animation Base Styles --- */
 /* (Elements start hidden/offset) */
@@ -716,18 +661,4 @@ body.dark-mode footer p {
 
 #cost-table td:first-child {
     text-align: left;
-}
-
-/* --- Theme Toggle --- */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-.theme-toggle:hover {
-    color: var(--primary-color);
 }
