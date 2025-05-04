@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Kostenfaktoren für die Gewerke
         const costPerSquareMeter = {
             architecture: 100, // Architektur: 100 €/m²
-            supervision: 150,  // Bauaufsicht: 150 €/m²
+            supervision: 150,
             energy: 50         // Energienachweis: 50 €/m²
         };
 
@@ -93,4 +93,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    }); // End DOMContentLoaded
+    const header = document.getElementById('header');
+    const heroSection = document.getElementById('hero');
+
+    function toggleHeaderVisibility() {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+        if (heroBottom > 0) {
+            header.style.opacity = '1';
+            header.style.pointerEvents = 'auto';
+        } else {
+            header.style.opacity = '0';
+            header.style.pointerEvents = 'none';
+        }
+    }
+
+    window.addEventListener('scroll', toggleHeaderVisibility);
+
+    window.addEventListener('scroll', () => {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+        if (heroBottom > 0) {
+            // Header bleibt sichtbar, solange der Hero-Bereich sichtbar ist
+            header.style.position = 'absolute';
+            header.style.top = '0';
+            header.style.opacity = '1'; // Header sichtbar
+            header.style.pointerEvents = 'auto'; // Interaktionen erlauben
+            header.style.transition = 'opacity 0.3s ease, pointer-events 0.3s ease'; // Sanfter Übergang
+        } else {
+            // Header wird ausgeblendet, wenn der Hero-Bereich verlassen wird
+            header.style.opacity = '0'; // Header unsichtbar
+            header.style.pointerEvents = 'none'; // Interaktionen deaktivieren
+            header.style.transition = 'opacity 0.3s ease, pointer-events 0.3s ease'; // Sanfter Übergang
+        }
+
+        if (window.scrollY < 100) {
+            console.log('Header sichtbar');
+            header.style.opacity = '1';
+        } else {
+            console.log('Header unsichtbar');
+            header.style.opacity = '0';
+        }
+    });
+
+}); // End DOMContentLoaded

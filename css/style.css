@@ -27,7 +27,7 @@ body {
     font-family: var(--body-font);
     line-height: 1.7;
     color: var(--text-color);
-    background: linear-gradient(to bottom, #ffffff 5%, var(--bg-color) 95%) !important;
+    background: linear-gradient(to bottom, #ffffff 5%, var(--bg-color) 9%) !important;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -98,7 +98,9 @@ img {
     background-color: white; /* Heller Hintergrund */
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-    top: -70px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
 #header a {
