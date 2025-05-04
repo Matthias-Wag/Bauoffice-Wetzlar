@@ -39,15 +39,18 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-content animate-on-scroll fade-in">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="/images/herovideo.mp4" type="video/mp4">
+            Ihr Browser unterstützt dieses Videoformat nicht.
+        </video>
+        <div class="hero-content">
             <h1>Kempf & Schreiner</h1>
             <p>Arbeiten nach dem Standard eines Diplomingenieuren</p>
-            <a href="#portfolio" class="cta-button">Unsere Projekte</a>
-        </div>
-        <div class="scroll-down-indicator">
-             <a href="#about"><span></span>Scroll</a>
+            <a href="#about" class="cta-button">Mehr erfahren</a>
         </div>
     </section>
+
+    
 
     <!-- About Section -->
     <section id="about" class="content-section">
@@ -96,31 +99,23 @@
             <h2 class="section-title animate-on-scroll fade-in">Vorgestellte Projekte</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item animate-on-scroll zoom-in">
-                    <a href="/Projekt1.html"> <img src="https://picsum.photos/seed/project1/600/400" alt="Project Alpha"></a>
-                    <div class="portfolio-overlay">
-                        <h3>Modern Residence</h3>
-                        <p>Cityscape Views</p>
-                    </div>
+                    <img src="/images/Lahnau10.JPG" alt="Project Alpha">
+                    <a href="projekteins.html"> 
+                        <div class="portfolio-overlay">
+                            <h3>Lahnau, Kreis Wetzlar</h3>
+                            <p style="font-size: 15pt">Aktuelles Projekt</p>
+                            <p>4 Reihenhäuser</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="portfolio-item animate-on-scroll zoom-in delay-1">
-                    <img src="https://picsum.photos/seed/project2/600/400" alt="Project Beta">
+                    <a href="projekteins.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://picsum.photos/seed/project2/600/400" alt="Project Beta">
+                    </a>
                      <div class="portfolio-overlay">
-                        <h3>Commercial Hub</h3>
-                        <p>Downtown Core</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate-on-scroll zoom-in delay-2">
-                    <img src="https://picsum.photos/seed/project3/600/400" alt="Project Gamma">
-                     <div class="portfolio-overlay">
-                        <h3>Cultural Center</h3>
-                        <p>Community Space</p>
-                    </div>
-                </div>
-                 <div class="portfolio-item animate-on-scroll zoom-in delay-3">
-                    <img src="https://picsum.photos/seed/project4/600/400" alt="Project Delta">
-                     <div class="portfolio-overlay">
-                        <h3>Eco Tower</h3>
-                        <p>Sustainable Living</p>
+                        <h3>Lahnau, Kreis Wetzlar</h3>
+                        <p>Aktuelles Projekt</p> <br>
+                        
                     </div>
                 </div>
             </div>
@@ -295,5 +290,12 @@
         }
     });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const video = document.getElementById('hero-video');
+        video.playbackRate = 0.75; // Setzt die Wiedergabegeschwindigkeit auf 50%
+    });
+</script>
 </body>
 </html>

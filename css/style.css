@@ -198,14 +198,31 @@ body.dark-mode #header a:hover {
 
 /* --- Hero Section --- */
 #hero {
+    position: relative;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://upload.wikimedia.org/wikipedia/commons/0/08/Wetzlar%2C_Germany_-_panoramio.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stellt sicher, dass das Video den gesamten Bereich abdeckt */
+    z-index: -1; /* Video hinter den Inhalt legen */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Inhalt über das Video legen */
     text-align: center;
     color: var(--light-text-color);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 #hero h1 {
@@ -386,11 +403,11 @@ body.dark-mode .services-grid {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 86, 179, 0.8));
+    background: linear-gradient(rgba(250, 74, 74, 0.015), rgba(248, 23, 23, 0.586));
     color: var(--light-text-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
     opacity: 0;
