@@ -27,7 +27,7 @@ body {
     font-family: var(--body-font);
     line-height: 1.7;
     color: var(--text-color);
-    background: linear-gradient(to bottom, #ffffff 5%, var(--bg-color) 9%) !important;
+    background: linear-gradient(to bottom, #ffffff 10%, var(--bg-color) 60%) !important;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -95,7 +95,7 @@ img {
 /* --- Header --- */
 /* Light Mode Header */
 #header {
-    background-color: white; /* Heller Hintergrund */
+    background-color: rgba(255,255,255, 0.9); /* Heller Hintergrund */
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
     position: fixed;
@@ -175,6 +175,7 @@ img {
     height: 100%;
     object-fit: cover; /* Stellt sicher, dass das Video den gesamten Bereich abdeckt */
     z-index: -1; /* Video hinter den Inhalt legen */
+    opacity: 0.8;;
 }
 
 .hero-content {
@@ -219,7 +220,7 @@ img {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #9e0000;
     color: var(--light-text-color);
     transform: translateY(-3px);
 }
@@ -305,15 +306,16 @@ img {
     text-align: center;
 }
 
+/* Ensure box-shadow transitions are smooth when hover ends */
 .service-item {
     padding: 40px 20px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom, #f9c789 30%, var(--bg-color) 90%);
+    transition: box-shadow 0.6s; /* Add transition for box-shadow */
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.1);
 }
 
@@ -513,8 +515,9 @@ footer p {
 /* (Elements start hidden/offset) */
 .animate-on-scroll {
     opacity: 0;
-    transition: opacity var(--transition-speed) ease-out, transform var(--transition-speed) ease-out;
+    transition: opacity var(--transition-speed) ease-out, transform var(--transition-speed) ease-out, box-shadow 0.6s ease;
 }
+
 
 .fade-in {
     /* Already starts with opacity 0 */
