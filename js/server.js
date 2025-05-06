@@ -52,7 +52,7 @@ app.post('/send-email', async (req, res) => {
                <p>vielen Dank für Ihre Nachricht. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich bei Ihnen melden.</p>
                <p><strong>Ihre Nachricht:</strong></p>
                <p>${nachricht || 'Keine Nachricht angegeben'}</p>
-               <p>Mit freundlichen Grüßen,<br>PL Bau</p>`,
+               <p>Mit freundlichen Grüßen,<br>Bauoffice Wetzlar</p>`,
     };
 
     try {
