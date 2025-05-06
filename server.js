@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Serve static files (e.g., index.html)
-app.use(express.static(path.resolve(__dirname, '../')));
+app.use(express.static(__dirname));
 
 // POST route for the contact form
 app.post('/send-email', async (req, res) => {
