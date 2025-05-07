@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bauoffice Wetzlar - Projekt: Lahnau</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Optional: Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Add specific padding to the main content to account for the fixed header */
+        main {
+            padding-top: 100px; /* Adjust if header height changes */
+            padding-bottom: 40px; /* Add some space before the footer */
+        }
+        
+        /* Styles for the project step layout (reusing structure from about section) */
+        .project-step-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px; /* Consistent gap */
+        }
+
+        .step-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .step-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px; /* Consistent with about image */
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Consistent with about image */
+        }
+        .step-image img {
+             border-radius: 8px; /* Consistent with about image */
+        }
+
+        /* Add some space between consecutive project steps */
+        .project-step + .project-step {
+            margin-top: 60px; /* Or adjust as needed */
+        }
+
+        /* Ensure section title within project steps aligns */
+         .project-step .section-title {
+            margin-bottom: 30px; /* Less margin than main section title */
+         }
+         .project-step .section-title::after {
+             left: 0; /* Align underline left for text-aligned title */
+             transform: translateX(0);
+         }
+
+
+        /* Responsive adjustments for alternating layout */
+        @media (max-width: 768px) {
+            .project-step-content {
+                flex-direction: column; /* Stack on small screens */
+                gap: 20px;
+            }
+            .step-text, .step-image {
+                min-width: 100%; /* Take full width */
+            }
+            /* Ensure images appear below text when stacked */
+             .project-step-content:nth-child(odd) .step-image {
+                order: 2; /* Move image below text */
+             }
+             .project-step-content:nth-child(odd) .step-text {
+                order: 1; /* Keep text first */
+             }
+             .project-step-content:nth-child(even) .step-image {
+                 order: 2;
+             }
+             .project-step-content:nth-child(even) .step-text {
+                 order: 1;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header - COPIED FROM INDEX.HTML -->
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Bauoffice Wetzlar</a> <!-- Link back to index -->
+            <ul>
+                <li><a href="index.html#hero">Home</a></li> <!-- Link back to index -->
+                <li><a href="index.html#about">Über uns</a></li> <!-- Link back to index -->
+                <li><a href="index.html#services">Angebot</a></li> <!-- Link back to index -->
+                <li><a href="index.html#portfolio">Portfolio</a></li> <!-- Link back to index -->
+                <!-- <li><a href="index.html#partners">Partner</a></li> --> <!-- Link back to index -->
+                <li><a href="index.html#contact">Kontakt</a></li> <!-- Link back to index -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Main Project Title -->
+            <h2 class="section-title animate-on-scroll fade-in">Projekt: Lahnau, Kreis Wetzlar</h2>
+
+            <!-- Overview/Intro Section (Optional) -->
+            <section class="content-section project-step">
+                 <div class="project-step-content">
+                     <div class="step-text animate-on-scroll slide-in-left">
+                         <h3>Übersicht & Herausforderungen</h3>
+                         <p>
+                            Dieses Projekt umfasste den Bau von vier modernen Reihenhäusern in Lahnau. Die Herausforderungen lagen in der effizienten Nutzung des Grundstücks, der Einhaltung hoher Energiestandards und der Koordination verschiedener Gewerke unter Einhaltung eines straffen Zeitplans. Wir begleiteten das Vorhaben von der ersten Planung bis zur erfolgreichen Übergabe an die neuen Eigentümer.
+                         </p>
+                          <p>Im Folgenden möchten wir Ihnen die einzelnen Schritte und Phasen dieses Projekts näherbringen.</p>
+                     </div>
+                      <div class="step-image animate-on-scroll slide-in-right">
+                          <!-- Placeholder Image: Replace with an overview image of the project site or concept -->
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5067.244131957634!2d8.57995919947026!3d50.578390199525664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc5bce29864e97%3A0xf69d1ad72bd514f4!2s35633%20Lahnau-Atzbach!5e0!3m2!1sde!2sde!4v1746638214113!5m2!1sde!2sde" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Phase 1: Planung und Genehmigung -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-image animate-on-scroll slide-in-left">
+                         <!-- Placeholder Image: Replace with a photo of architectural drawings or a site plan -->
+                        <img src="/images/Lahnau1.JPG" alt="Image representing the planning phase">
+                    </div>
+                    <div class="step-text animate-on-scroll slide-in-right">
+                        <h3>Phase 1: Planung & Entwurf</h3>
+                        <p>
+                            Alles beginnt mit der Vision. In der ersten Phase haben wir die individuellen Bedürfnisse der zukünftigen Bewohner analysiert und diese in detaillierte Architekturpläne und Entwürfe umgesetzt. Parallel dazu kümmerten wir uns um die Einholung aller notwendigen Genehmigungen von den zuständigen Behörden, was eine reibungslose Ausführung sicherstellt.
+                        </p>
+                        <ul>
+                           <li>Entwurf & Detailplanung</li>
+                           <li>Erstellung Bauantragsunterlagen</li>
+                           <li>Energieberatung & -nachweise</li>
+                           <li>Beantragung von Baugenehmigungen</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+            
+            
+            <img src="/images/arrow.png" alt="Arrow pointing to the next phase" class="arrow" style="width: 300px; transform: rotate(20deg); margin: 0 auto;">
+            
+            
+            <!-- Phase 2: Bauplatzvorbereitung und Fundament -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-text animate-on-scroll slide-in-left">
+                        <h3>Phase 2: Bauplatzvorbereitung & Fundament</h3>
+                        <p>
+                           Nachdem die Planungen abgeschlossen und die Genehmigungen erteilt waren, begannen die Arbeiten auf dem Baugrundstück. Die Bauplatzvorbereitung umfasst die Vermessung, das Roden und den Erdaushub. Anschließend wurde das Fundament gelegt – das kritische Rückgrat, das Stabilität und Langlebigkeit für die gesamte Struktur gewährleistet.
+                        </p>
+                         <ul>
+                            <li>Vermessung & Gelände vorbereiten</li>
+                            <li>Erdaushub</li>
+                            <li>Fundamentlegung (Bodenplatte, Keller etc.)</li>
+                         </ul>
+                    </div>
+                     <div class="step-image animate-on-scroll slide-in-right">
+                          <!-- Placeholder Image: Replace with a photo of the prepared site or foundation work -->
+                        <img src="/images/Lahnau2.JPG" alt="Image representing groundwork and foundation phase">
+                     </div>
+                </div>
+            </section>
+
+            <img src="/images/arrow.png" alt="Arrow pointing to the next phase" class="arrow" style="width: 300px; transform: rotate(100deg); margin: 0 auto; transform: scaleX(-1);">
+
+
+             <!-- Phase 3: Rohbau -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-image animate-on-scroll slide-in-left">
+                         <!-- Placeholder Image: Replace with a photo of walls being built or the roof structure -->
+                         <img src="/images/Lahnau3.JPG" alt="Image representing the shell construction phase">
+                    </div>
+                    <div class="step-text animate-on-scroll slide-in-right">
+                        <h3>Phase 3: Rohbau & Dachkonstruktion</h3>
+                        <p>
+                            Der Rohbau ist die sichtbare Hülle des zukünftigen Hauses. Hier werden die Mauern hochgezogen, Geschossdecken eingezogen und schließlich die Dachkonstruktion erstellt. Dieser Abschnitt erfordert Präzision, um die strukturelle Integrität und die Einhaltung der geplanten Architektur sicherzustellen.
+                        </p>
+                         <ul>
+                            <li>Errichtung der Mauern</li>
+                            <li>Montage von Decken und Treppen</li>
+                            <li>Dachstuhl errichten</li>
+                            <li>Dacheindeckung</li>
+                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 4: Fenster, Fassade und Dämmung -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-text animate-on-scroll slide-in-left">
+                        <h3>Phase 4: Fenster, Fassade & Dämmung</h3>
+                        <p>
+                           Nachdem der Rohbau steht, wird das Gebäude wetterfest gemacht. Dies beinhaltet den Einbau von Fenstern und Außentüren sowie die Anbringung der Fassadendämmung und der endgültigen Fassadenverkleidung. Diese Schritte sind entscheidend für die Energieeffizienz und das äußere Erscheinungsbild.
+                        </p>
+                        <ul>
+                           <li>Einbau von Fenstern und Türen</li>
+                           <li>Anbringen der Außendämmung</li>
+                           <li>Gestaltung der Fassade</li>
+                        </ul>
+                    </div>
+                    <div class="step-image animate-on-scroll slide-in-right">
+                         <!-- Placeholder Image: Replace with a photo showing windows installed or facade work -->
+                        <img src="/images/Lahnau4.JPG" alt="Image representing windows and facade work">
+                    </div>
+                </div>
+            </section>
+
+             <!-- Phase 5: Technischer Ausbau -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-image animate-on-scroll slide-in-left">
+                        <!-- Placeholder Image: Replace with a photo showing pipes or wiring -->
+                        <img src="/images/Lahnau5.JPG" alt="Image representing electrical or plumbing installation">
+                    </div>
+                    <div class="step-text animate-on-scroll slide-in-right">
+                        <h3>Phase 5: Technischer Ausbau (HLK, Elektro, Sanitär)</h3>
+                        <p>
+                            Parallel zum Innenausbau erfolgen die Installationen für Heizung, Lüftung, Klima (HLK), Elektrik und Sanitär. Alle Leitungen und Rohre werden verlegt, um das Gebäude mit den notwendigen technischen Systemen auszustatten, bevor die Wände geschlossen werden.
+                        </p>
+                         <ul>
+                           <li>Verlegung von Elektroleitungen</li>
+                           <li>Installation von Heizungs- und Lüftungssystemen</li>
+                           <li>Einbau von Sanitärinstallationen</li>
+                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 6: Innenausbau & Außenanlagen -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-text animate-on-scroll slide-in-left">
+                        <h3>Phase 6: Innenausbau & Außenanlagen</h3>
+                        <p>
+                            Der Innenausbau bringt Leben in das Gebäude – hier werden Wände verputzt, Böden verlegt, Malerarbeiten ausgeführt und die letzten Einbauten vorgenommen. Gleichzeitig gestalten wir die Außenanlagen, schaffen Zufahrten, Terrassen und legen den Grundstein für die Gartengestaltung.
+                        </p>
+                        <ul>
+                           <li>Estrich- und Putzarbeiten</li>
+                           <li>Installation der Innentüren</li>
+                           <li>Boden- und Wandbeläge</li>
+                           <li>Malerarbeiten</li>
+                           <li>Terrassen und Wege anlegen</li>
+                        </ul>
+                    </div>
+                     <div class="step-image animate-on-scroll slide-in-right">
+                          <!-- Placeholder Image: Replace with a photo of interior work or initial landscaping -->
+                         <img src="/images/Lahnau6.JPG" alt="Image representing interior finishing or landscaping">
+                     </div>
+                </div>
+            </section>
+
+             <!-- Phase 7: Fertigstellung & Übergabe -->
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-image animate-on-scroll slide-in-left">
+                         <!-- Placeholder Image: Replace with a photo of the finished project -->
+                         <img src="/images/Lahnau7.JPG" alt="Image representing the finished project handover">
+                    </div>
+                    <div class="step-text animate-on-scroll slide-in-right">
+                        <h3>Phase 7: Fertigstellung & Übergabe</h3>
+                        <p>
+                           Die letzte Phase ist die sorgfältige Überprüfung aller Arbeiten. Es erfolgen finale Abnahmen, Restarbeiten werden erledigt und das Gebäude wird gereinigt. Nach erfolgreichem Abschluss erfolgt die offizielle Übergabe an die Eigentümer, inklusive aller relevanten Unterlagen und Anweisungen. Ein Bauprojekt ist erst beendet, wenn Sie zufrieden in Ihr neues Zuhause einziehen können.
+                        </p>
+                         <ul>
+                           <li>Endabnahme aller Gewerke</li>
+                           <li>Gebäudereinigung</li>
+                           <li>Offizielle Schlüsselübergabe</li>
+                           <li>Dokumentation & Einweisung</li>
+                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-text animate-on-scroll slide-in-left">
+                        <h3>Phase 6: Innenausbau & Außenanlagen</h3>
+                        <p>
+                            Der Innenausbau bringt Leben in das Gebäude – hier werden Wände verputzt, Böden verlegt, Malerarbeiten ausgeführt und die letzten Einbauten vorgenommen. Gleichzeitig gestalten wir die Außenanlagen, schaffen Zufahrten, Terrassen und legen den Grundstein für die Gartengestaltung.
+                        </p>
+                        <ul>
+                           <li>Estrich- und Putzarbeiten</li>
+                           <li>Installation der Innentüren</li>
+                           <li>Boden- und Wandbeläge</li>
+                           <li>Malerarbeiten</li>
+                           <li>Terrassen und Wege anlegen</li>
+                        </ul>
+                    </div>
+                     <div class="step-image animate-on-scroll slide-in-right">
+                          <!-- Placeholder Image: Replace with a photo of interior work or initial landscaping -->
+                         <img src="/images/Lahnau8.JPG" alt="Image representing interior finishing or landscaping">
+                     </div>
+                </div>
+            </section>
+
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-image animate-on-scroll slide-in-left">
+                         <!-- Placeholder Image: Replace with a photo of the finished project -->
+                         <img src="/images/Lahnau9.JPG" alt="Image representing the finished project handover">
+                    </div>
+                    <div class="step-text animate-on-scroll slide-in-right">
+                        <h3>Phase 7: Fertigstellung & Übergabe</h3>
+                        <p>
+                           Die letzte Phase ist die sorgfältige Überprüfung aller Arbeiten. Es erfolgen finale Abnahmen, Restarbeiten werden erledigt und das Gebäude wird gereinigt. Nach erfolgreichem Abschluss erfolgt die offizielle Übergabe an die Eigentümer, inklusive aller relevanten Unterlagen und Anweisungen. Ein Bauprojekt ist erst beendet, wenn Sie zufrieden in Ihr neues Zuhause einziehen können.
+                        </p>
+                         <ul>
+                           <li>Endabnahme aller Gewerke</li>
+                           <li>Gebäudereinigung</li>
+                           <li>Offizielle Schlüsselübergabe</li>
+                           <li>Dokumentation & Einweisung</li>
+                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section project-step">
+                <div class="project-step-content">
+                    <div class="step-text animate-on-scroll slide-in-left">
+                        <h3>Phase 6: Innenausbau & Außenanlagen</h3>
+                        <p>
+                            Der Innenausbau bringt Leben in das Gebäude – hier werden Wände verputzt, Böden verlegt, Malerarbeiten ausgeführt und die letzten Einbauten vorgenommen. Gleichzeitig gestalten wir die Außenanlagen, schaffen Zufahrten, Terrassen und legen den Grundstein für die Gartengestaltung.
+                        </p>
+                        <ul>
+                           <li>Estrich- und Putzarbeiten</li>
+                           <li>Installation der Innentüren</li>
+                           <li>Boden- und Wandbeläge</li>
+                           <li>Malerarbeiten</li>
+                           <li>Terrassen und Wege anlegen</li>
+                        </ul>
+                    </div>
+                     <div class="step-image animate-on-scroll slide-in-right">
+                          <!-- Placeholder Image: Replace with a photo of interior work or initial landscaping -->
+                         <img src="/images/Lahnau10.JPG" alt="Image representing interior finishing or landscaping">
+                     </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer - COPIED FROM INDEX.HTML -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Bauoffice Wetzlar. All Rights Reserved.</p>
+             <p><a style="color: white;" href="/impressum.html">Impressum</a> I <a style="color: white;" href="/datenschutz.html">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <!-- Script for scroll animations - COPIED FROM INDEX.HTML -->
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>

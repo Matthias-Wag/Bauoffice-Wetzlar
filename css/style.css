@@ -311,7 +311,7 @@ img {
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 0px 5px rgba(0,0,0,0.1);
-    background: linear-gradient(to bottom, #f9c789 20%, var(--bg-color) 65%);
+    background: linear-gradient(to bottom, #f6d0a1 20%, var(--bg-color) 65%);
     transition: box-shadow 0.6s; /* Add transition for box-shadow */
 }
 
@@ -682,4 +682,74 @@ footer p {
 
 .impressum-page footer {
     margin-top: auto; /* Schiebt den Footer an das Ende */
+}
+
+/* Design für Projekteins.html */
+
+/* --- Design for specific project pages --- */
+/* Add padding to main content to prevent overlap with fixed header */
+main {
+    padding-top: 100px; /* Adjust based on header height */
+    padding-bottom: 40px;
+}
+
+/* Style for project step layout (reusing structure from about) */
+.project-step-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px; /* Consistent gap */
+}
+
+.step-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.step-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.step-image img {
+     border-radius: 8px;
+     width: 100%; /* Ensure images fill their container */
+     height: auto;
+     display: block;
+}
+
+/* Add space between consecutive project steps */
+.project-step + .project-step {
+    margin-top: 60px;
+}
+
+/* Ensure section title within project steps aligns */
+.project-step .section-title {
+    margin-bottom: 30px; /* Less margin than main section title */
+    text-align: left; /* Align title to the left */
+    /* Ensure underline is left-aligned */
+}
+.project-step .section-title::after {
+    left: 0; /* Align underline left */
+    transform: translateX(0); /* Reset transform */
+}
+
+/* Responsive adjustments for alternating layout stacking */
+@media (max-width: 768px) {
+    .project-step-content {
+        flex-direction: column; /* Stack text and image */
+        gap: 20px; /* Smaller gap when stacked */
+    }
+    .step-text, .step-image {
+        min-width: 100%; /* Take full width */
+    }
+    /* Ensure image is always below text when stacked, overriding potential flex order changes for alternation */
+    .project-step-content .step-image {
+        order: 2;
+    }
+     .project-step-content .step-text {
+        order: 1;
+    }
 }
