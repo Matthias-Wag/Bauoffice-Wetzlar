@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Intersection Observer for Animations ---
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             // When element comes into view
@@ -96,44 +97,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     const heroSection = document.getElementById('hero');
 
-    function toggleHeaderVisibility() {
+    function toggleHeaderPosition() {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-        if (heroBottom > 0) {
-            header.style.opacity = '1';
-            header.style.pointerEvents = 'auto';
+        console.log('Hero Bottom:', heroBottom); // Debugging-Log
+
+        if (heroBottom <= 0) {
+            console.log('Header wird absolut'); // Debugging-Log
+            header.classList.add('absolute'); // Header wird absolut
         } else {
-            header.style.opacity = '0';
-            header.style.pointerEvents = 'none';
+            console.log('Header bleibt fixed'); // Debugging-Log
+            header.classList.remove('absolute'); // Header bleibt fixed
         }
     }
 
-    window.addEventListener('scroll', toggleHeaderVisibility);
+    // Scroll-Event-Listener hinzufügen
+    window.addEventListener('scroll', toggleHeaderPosition);
 
-    window.addEventListener('scroll', () => {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-
-        if (heroBottom > 0) {
-            // Header bleibt sichtbar, solange der Hero-Bereich sichtbar ist
-            header.style.position = 'absolute';
-            header.style.top = '0';
-            header.style.opacity = '1'; // Header sichtbar
-            header.style.pointerEvents = 'auto'; // Interaktionen erlauben
-            header.style.transition = 'opacity 0.3s ease, pointer-events 0.3s ease'; // Sanfter Übergang
-        } else {
-            // Header wird ausgeblendet, wenn der Hero-Bereich verlassen wird
-            header.style.opacity = '0'; // Header unsichtbar
-            header.style.pointerEvents = 'none'; // Interaktionen deaktivieren
-            header.style.transition = 'opacity 0.3s ease, pointer-events 0.3s ease'; // Sanfter Übergang
-        }
-
-        if (window.scrollY < 100) {
-            console.log('Header sichtbar');
-            header.style.opacity = '1';
-        } else {
-            console.log('Header unsichtbar');
-            header.style.opacity = '0';
-        }
-    });
+    // Initiale Prüfung beim Laden der Seite
+    toggleHeaderPosition();
 
 }); // End DOMContentLoaded
